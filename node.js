@@ -48,6 +48,7 @@ bot.on("message", function(message) {
     var mutedrole = message.guild.roles.find("name", "xMuted");
 
 
+
     const status = {
     online: "Online",
     idle: "Idle",
@@ -55,6 +56,51 @@ bot.on("message", function(message) {
     offline: "Offline/Invisible"
 };
 
+
+   if(message.content.startsWith("code")) {
+	let ww2 = new Discord.RichEmbed()
+	.setColor("RED")
+	.setTitle("Paste this code into the console of starve.io.")
+	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+	member.send(ww2)
+	.then(message => {
+    message.delete(10000)
+  })
+    }   
+
+       if(message.content.startsWith("?code")) {
+	let ww2 = new Discord.RichEmbed()
+	.setColor("RED")
+	.setTitle("Paste this code into the console of starve.io.")
+	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+	member.send(ww2)
+	.then(message => {
+    message.delete(10000)
+  })
+
+    }   
+
+ if(message.content.startsWith("!code")) {
+	let ww2 = new Discord.RichEmbed()
+	.setColor("RED")
+	.setTitle("Paste this code into the console of starve.io.")
+	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+	member.send(ww2)
+	.then(message => {
+    message.delete(10000)
+  })
+    }   
+
+ if(message.content.startsWith("-code")) {
+	let ww2 = new Discord.RichEmbed()
+	.setColor("RED")
+	.setTitle("Paste this code into the console of starve.io.")
+	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+	member.send(ww2)
+	.then(message => {
+    message.delete(10000)
+  })
+    }   
   if(command == "fuck"){
     let em = new Discord.RichEmbed()
     .setTitle("xFuck")
@@ -206,50 +252,6 @@ const randomizeCase = word => word.split('').map(c => Math.random() > 0.5 ? c.to
     message.delete();
 
 }
-    if(message.content == "code") {
-	let ww2 = new Discord.RichEmbed()
-	.setColor("RED")
-	.setTitle("Paste this code into the console of starve.io.")
-	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
-	message.author.send(ww2)
-	.then(message => {
-    message.delete(10000)
-  })
-    }   
-
-        if(message.content == "?code") {
-	let ww2 = new Discord.RichEmbed()
-	.setColor("RED")
-	.setTitle("Paste this code into the console of starve.io.")
-	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
-	message.author.send(ww2)
-	.then(message => {
-    message.delete(10000)
-  })
-
-    }   
-
-    if(message.content == "!code") {
-	let ww2 = new Discord.RichEmbed()
-	.setColor("RED")
-	.setTitle("Paste this code into the console of starve.io.")
-	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
-	message.author.send(ww2)
-	.then(message => {
-    message.delete(10000)
-  })
-    }   
-
-	    if(message.content == "-code") {
-	let ww2 = new Discord.RichEmbed()
-	.setColor("RED")
-	.setTitle("Paste this code into the console of starve.io.")
-	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
-	message.channel.send(ww2)
-	.then(message => {
-    message.delete(10000)
-  })
-    }   
 
 
    
