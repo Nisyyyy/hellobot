@@ -245,7 +245,7 @@ const randomizeCase = word => word.split('').map(c => Math.random() > 0.5 ? c.to
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
 	.setDescription(`javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
-	message.author.send(ww2)
+	message.channel.send(ww2)
 	.then(message => {
     message.delete(10000)
   })
