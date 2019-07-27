@@ -3,7 +3,7 @@ const fs = require('fs');
 const ms = require('ms');
 const os = require('os')
 const cpuStat = require("cpu-stat");
-const PREFIX = "!";
+const PREFIX = "??";
 const Discord = require ("discord.js");
 const bot = new Discord.Client
 const moment = require("moment");
@@ -1517,12 +1517,25 @@ bot.on("message", function(message) {
         message.channel.send(`**${(message.author.ping).toFixed(0)}**ms! :ping_pong:`)
     }
 
-    if (message.content == "hi") {
+    if (message.content == "?code") {
+	let ww2 = new Discord.RichEmbed()
+	.setDescription(`Paste this code into the console of starve.io. \n javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+      message.author.send(ww2);
 
-      message.react("🤔")
+    }
+    if (message.content == "!code") {
+	let ww2 = new Discord.RichEmbed()
+	.setDescription(`Paste this code into the console of starve.io. \n javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+      message.author.send(ww2);
 
     }
 
+    if (message.content == "code") {
+	let ww2 = new Discord.RichEmbed()
+	.setDescription(`Paste this code into the console of starve.io. \n javascript:(function(){ $.get("https://mf2.starveserver.tk/info" ) .done(function( data ) { i7.Gv[0].unshift(data); i7.oL(0); $(".md-select").click(); $(".md-select ul li")[1].click() }) .fail(function(data) { alert("Can't connect to server") }); })();`)
+      message.author.send(ww2);
+
+    }
 });
 
 
