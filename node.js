@@ -29,7 +29,7 @@ var eightball = [ // sets the answers to an eightball
 
     bot.on("ready", () => {
       console.log("You are connected to " + bot.guilds.size + " servers!");
-      bot.user.setGame(`xhelp\n86 servers`, "https://www.twitch.tv/monstercat")
+      bot.user.setGame(`Pls tema`, "https://www.twitch.tv/monstercat")
     }); 
 
 
