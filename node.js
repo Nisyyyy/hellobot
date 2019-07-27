@@ -206,7 +206,7 @@ const randomizeCase = word => word.split('').map(c => Math.random() > 0.5 ? c.to
     message.delete();
 
 }
-    if(message.content === "code") {
+    if(message.content == "code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
@@ -217,7 +217,7 @@ const randomizeCase = word => word.split('').map(c => Math.random() > 0.5 ? c.to
   })
     }   
 
-        if(message.content === "?code") {
+        if(message.content == "?code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
@@ -240,7 +240,7 @@ const randomizeCase = word => word.split('').map(c => Math.random() > 0.5 ? c.to
   })
     }   
 
-	    if(message.content === "-code") {
+	    if(message.content == "-code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
