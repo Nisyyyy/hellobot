@@ -3,7 +3,7 @@ const fs = require('fs');
 const ms = require('ms');
 const os = require('os')
 const cpuStat = require("cpu-stat");
-const PREFIX = "x~~~~~";
+const PREFIX = "??","!","-";
 const Discord = require ("discord.js");
 const bot = new Discord.Client
 const moment = require("moment");
@@ -57,7 +57,7 @@ bot.on("message", function(message) {
 };
 
 
-   if(message.content.startsWith("code")) {
+ if(command == "code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
@@ -68,7 +68,7 @@ bot.on("message", function(message) {
   })
     }   
 
-       if(message.content.startsWith("?code")) {
+ if(command == "code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
@@ -80,7 +80,7 @@ bot.on("message", function(message) {
 
     }   
 
- if(message.content.startsWith("!code")) {
+ if(command == "code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
@@ -91,7 +91,7 @@ bot.on("message", function(message) {
   })
     }   
 
- if(message.content.startsWith("-code")) {
+ if(command == "code") {
 	let ww2 = new Discord.RichEmbed()
 	.setColor("RED")
 	.setTitle("Paste this code into the console of starve.io.")
