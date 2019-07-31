@@ -45,7 +45,7 @@ bot.on("message", function(message) {
     if (!message.content.startsWith(PREFIX)) return; 
     var args = message.content.substring(PREFIX.length).split(" "); 
     var command = args[0].toLowerCase();
-    var mutedrole = message.guild.roles.find("name", "xMuted");
+    var mutedrole = message.guild.roles.find("name", "Muted");
 
 
 
