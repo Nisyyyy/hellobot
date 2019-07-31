@@ -131,7 +131,7 @@ userWarnings += warnToAdd;
       `${warnedUser}, deuxième avertissement (raison: ${reason})`
     );
     const muteTime = "1h";
-    await warnedUser.addRole(muteRole.id);
+    warnedUser.addRole(muteRole.id);
     message.channel.send(
       `${warnedUser} est muté pendant ${muteTime} (raison: ${reason})`
     );
