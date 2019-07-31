@@ -99,16 +99,7 @@ bot.on("message", function(message) {
     })
   }
   
-class Warn extends Command {
-constructor(client) {
-super(client, {
-name: “warn”,
-description: “Commande pour avertir un utilisateur.”,
-usage: “warn”,
-category: “Système”,
-permLevel: “Modérateur”
-});
-}
+if(command == "warn"){
 
 async run(message, args) {
 try {
