@@ -151,7 +151,7 @@ userWarnings += warnToAdd;
     warnedUser.ban(reason);
     userWarnings -= warnToDel;
   }
-} catch (e) {
+catch (e) {
   console.log(e);
 }
     if(command == "boobs"){
