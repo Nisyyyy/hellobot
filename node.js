@@ -99,7 +99,7 @@ bot.on("message", function(message) {
     })
   }
   
-if(command == "warn"){
+if(command == "warnn"){
 
 async run(message, args) {
 try {
