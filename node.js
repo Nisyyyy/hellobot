@@ -151,9 +151,7 @@ userWarnings += warnToAdd;
     warnedUser.ban(reason);
     userWarnings -= warnToDel;
   }
-catch (e) {
-  console.log(e);
-}
+
     if(command == "boobs"){
 
     let em = new Discord.RichEmbed()
