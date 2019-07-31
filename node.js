@@ -110,10 +110,10 @@ return message.channel.send("Lutilisateur nexiste pas.");
 const warnToAdd = 1;
 const warnToDel = 5;
 const reason = args.join(" ").slice(22);
-this.client.warns.ensure(${warnedUser.id}, {
+this.client.warns.ensure(`${warnedUser.id}`, {
 warnings: 0
 });
-let userWarnings = this.client.warns.get(${warnedUser.id}, "warnings");
+let userWarnings = this.client.warns.get(`${warnedUser.id}`, "warnings");
 userWarnings += warnToAdd;
 
   this.client.warns.set(`${warnedUser.id}`, userWarnings, "warnings");
