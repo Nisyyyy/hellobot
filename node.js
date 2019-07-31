@@ -101,8 +101,7 @@ bot.on("message", function(message) {
   
 if(command == "warnn"){
 
-async run(message, args) {
-try {
+
 const warnedUser = message.guild.member(
 message.mentions.users.first() || message.guild.members.get(args[0])
 );
