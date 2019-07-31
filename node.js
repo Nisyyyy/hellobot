@@ -106,7 +106,7 @@ const warnedUser = message.guild.member(
 message.mentions.users.first() || message.guild.members.get(args[0])
 );
 if (!warnedUser)
-return message.channel.send("Lutilisateur nexiste pas.");
+return message.channel.send("Please mention someone to warn!");
 const warnToAdd = 1;
 const warnToDel = 5;
 const reason = args.join(" ").slice(22);
