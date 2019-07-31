@@ -99,7 +99,71 @@ bot.on("message", function(message) {
     })
   }
   
+class Warn extends Command {
+constructor(client) {
+super(client, {
+name: “warn”,
+description: “Commande pour avertir un utilisateur.”,
+usage: “warn”,
+category: “Système”,
+permLevel: “Modérateur”
+});
+}
 
+async run(message, args) {
+try {
+const warnedUser = message.guild.member(
+message.mentions.users.first() || message.guild.members.get(args[0])
+);
+if (!warnedUser)
+return message.channel.send(“L’utilisateur n’existe pas.”);
+const warnToAdd = 1;
+const warnToDel = 5;
+const reason = args.join(" ").slice(22);
+this.client.warns.ensure(${warnedUser.id}, {
+warnings: 0
+});
+let userWarnings = this.client.warns.get(${warnedUser.id}, “warnings”);
+userWarnings += warnToAdd;
+
+  this.client.warns.set(`${warnedUser.id}`, userWarnings, "warnings");
+
+  message.delete();
+
+  if (this.client.warns.get(`${warnedUser.id}`, "warnings") == 1) {
+    message.channel.send(
+      `${warnedUser}, premier avertissement (raison: ${reason})`
+    );
+  } else if (this.client.warns.get(`${warnedUser.id}`, "warnings") == 2) {
+    const muteRole = message.guild.roles.find(x => x.name === "muted");
+    if (!muteRole) message.guild.createRole("name", "muted");
+    message.channel.send(
+      `${warnedUser}, deuxième avertissement (raison: ${reason})`
+    );
+    const muteTime = "1h";
+    await warnedUser.addRole(muteRole.id);
+    message.channel.send(
+      `${warnedUser} est muté pendant ${muteTime} (raison: ${reason})`
+    );
+
+    setTimeout(function() {
+      warnedUser.removeRole(muteRole.id);
+      message.channel.send(`L'utilisateur ${warnedUser} n'est plus muté !`);
+    }, ms(muteTime));
+  } else if (this.client.warns.get(`${warnedUser.id}`, "warnings") == 3) {
+    message.channel.send(`${warnedUser}, troisième avertissement (raison: ${reason})`);
+    message.channel.send(`:warning: Attention ${warnedUser}, à 5 avertissement sa sera ban définitif`);
+  } else if (this.client.warns.get(`${warnedUser.id}`, "warnings") == 4) {
+    message.channel.send(`${warnedUser}, quatrième avertissement profite d'un kick (raison: ${reason})`);
+    warnedUser.kick(reason);
+  } else if (this.client.warns.get(`${warnedUser.id}`, "warnings") == 5) {
+    message.channel.send(`${warnedUser}, cinquième avertissement comme je te l'avait dit au cinquième warn j'allais te bannir donc au revoir`);
+    warnedUser.ban(reason);
+    userWarnings -= warnToDel;
+  }
+} catch (e) {
+  console.log(e);
+}
     if(command == "boobs"){
 
     let em = new Discord.RichEmbed()
@@ -1386,7 +1450,7 @@ if(command == "info"){
 
     if (command == "mute") { // creates the command mute
         if(!message.member.hasPermission("ADMINISTRATOR") && message.author.id !== "545003768350244875") return message.channel.send("Sorry you don't have permission to use this!");
-        let mutedrole = message.guild.roles.find("name", "xMuted"); // this is where you can replace the role name
+        let mutedrole = message.guild.roles.find("name", "Muted"); // this is where you can replace the role name
         var mutedmember = message.mentions.members.first(); // sets the mentioned user to the var kickedmember
 	if(!mutedmember) return message.channel.send("Please mention someone to mute!")
         if (!mutedmember) return message.reply("Please mention a valid member of this server!") // if there is no kickedmmeber var
@@ -1520,6 +1584,9 @@ bot.on("message", function(message) {
   if (message.isMentioned("545003768350244875")) {
 	message.channel.send("Dont ping this guy , u moron!")
   }
+
+
+
 
 });
 
