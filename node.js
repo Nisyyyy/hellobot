@@ -101,7 +101,7 @@ bot.on("message", function(message) {
   
 if(command == "warnn"){
 
-
+const warnedGuild = message.guild;
 const warnedUser = message.guild.member(
 message.mentions.users.first() || message.guild.members.get(args[0])
 );
