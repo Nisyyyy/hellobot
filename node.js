@@ -59,14 +59,44 @@ bot.on("message", function(message) {
     
 
 
-    if (message.isMentioned("339845408157073408" & "319275658809442314" & "407222127658532864" & "545003768350244875" & "301073055524847616" & "356818912425279489")) {
+    if (message.isMentioned("339845408157073408")) {
         var guy = message.guild.members.get("545003768350244875");
         var banreasondelete = 5 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
     guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
   }
 
-    
+       if (message.isMentioned("319275658809442314")) {
+        var guy = message.guild.members.get("545003768350244875");
+        var banreasondelete = 5 + guy.user.id.length ;
+        var mgg = message.content.substring(banreasondelete).split(" ");
+    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
+  }
+        if (message.isMentioned("407222127658532864")) {
+        var guy = message.guild.members.get("545003768350244875");
+        var banreasondelete = 5 + guy.user.id.length ;
+        var mgg = message.content.substring(banreasondelete).split(" ");
+    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
+  }
+        if (message.isMentioned("545003768350244875")) {
+        var guy = message.guild.members.get("545003768350244875");
+        var banreasondelete = 5 + guy.user.id.length ;
+        var mgg = message.content.substring(banreasondelete).split(" ");
+    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
+  }
+        if (message.isMentioned("301073055524847616")) {
+        var guy = message.guild.members.get("545003768350244875");
+        var banreasondelete = 5 + guy.user.id.length ;
+        var mgg = message.content.substring(banreasondelete).split(" ");
+    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
+  }
+        if (message.isMentioned("356818912425279489")) {
+        var guy = message.guild.members.get("545003768350244875");
+        var banreasondelete = 5 + guy.user.id.length ;
+        var mgg = message.content.substring(banreasondelete).split(" ");
+    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
+  }
+ 
 
 
     
