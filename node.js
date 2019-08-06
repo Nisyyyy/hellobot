@@ -59,11 +59,11 @@ bot.on("message", function(message) {
     
 
 
-    if (message.isMentioned("339845408157073408")) {
+    if (message.isMentioned("339845408157073408" && "319275658809442314" && "407222127658532864" && "545003768350244875" && "301073055524847616" && "356818912425279489")) {
         var guy = message.guild.members.get("545003768350244875");
         var banreasondelete = 5 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n **${mgg}** `)
+    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
   }
 
     
