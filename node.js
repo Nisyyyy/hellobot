@@ -63,20 +63,26 @@ bot.on("message", function(message) {
         var guy = message.guild.members.get("545003768350244875");
         var banreasondelete = 5 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg );
+        let guysend = new Discord.RichEmbed()
+            .setDescription(`**${message.author.username}** \n Pinged ZeRo!! with the message: \n` + mgg )
+    guy.send(guysend);
   }
 
        if (message.isMentioned("319275658809442314")) {
         var guy = message.guild.members.get("545003768350244875");
         var banreasondelete = 5 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged **[PS]wolfleader** with the message: \n` + mgg );
+        let guysend = new Discord.RichEmbed()
+            .setDescription(`**${message.author.username}** \n Pinged **[PS]wolfleader** with the message: \n` + mgg )
+    guy.send(guysend);
   }
         if (message.isMentioned("407222127658532864")) {
         var guy = message.guild.members.get("545003768350244875");
-        var banreasondelete = 6 + guy.user.id.length ;
+        var banreasondelete = 4 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged **On.ToP.x.exe** with the message: \n` + mgg );
+        let guysend = new Discord.RichEmbed()
+            .setDescription(`**${message.author.username}** \n Pinged **On.ToP.x.exe** with the message: \n` + mgg )
+    guy.send(guysend);
   }
         if (message.isMentioned("545003768350244875")) {
         var guy = message.guild.members.get("545003768350244875");
@@ -88,15 +94,19 @@ bot.on("message", function(message) {
   }
         if (message.isMentioned("301073055524847616")) {
         var guy = message.guild.members.get("545003768350244875");
-        var banreasondelete = 5 + guy.user.id.length ;
+        var banreasondelete = 4 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged **Stranger[AG]** with the message: \n` + mgg );
+        let guysend = new Discord.RichEmbed()
+            .setDescription(`**${message.author.username}** \n Pinged **Stranger[AG]** with the message: \n` + mgg )
+    guy.send(guysend);
   }
         if (message.isMentioned("356818912425279489")) {
         var guy = message.guild.members.get("545003768350244875");
-        var banreasondelete = 5 + guy.user.id.length ;
+        var banreasondelete = 4 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged **Ash 🌺** with the message: \n` + mgg );
+        let guysend = new Discord.RichEmbed()
+            .setDescription(`**${message.author.username}** \n Pinged **Ash 🌺** with the message: \n` + mgg )
+    guy.send(guysend);
   }
  
 
