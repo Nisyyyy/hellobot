@@ -82,7 +82,9 @@ bot.on("message", function(message) {
         var guy = message.guild.members.get("545003768350244875");
         var banreasondelete = 5 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
-    guy.send(`**${message.author.username}** \n Pinged **nissy** with the message: \n` + mgg );
+        let guysend = new Discord.RichEmbed()
+            .setDescription(`**${message.author.username}** \n Pinged **nissy** with the message: \n` + mgg )
+    guy.send(guysend);
   }
         if (message.isMentioned("301073055524847616")) {
         var guy = message.guild.members.get("545003768350244875");
