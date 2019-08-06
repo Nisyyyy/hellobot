@@ -74,7 +74,7 @@ bot.on("message", function(message) {
   }
         if (message.isMentioned("407222127658532864")) {
         var guy = message.guild.members.get("545003768350244875");
-        var banreasondelete = 5 + guy.user.id.length ;
+        var banreasondelete = 6 + guy.user.id.length ;
         var mgg = message.content.substring(banreasondelete).split(" ");
     guy.send(`**${message.author.username}** \n Pinged **On.ToP.x.exe** with the message: \n` + mgg );
   }
